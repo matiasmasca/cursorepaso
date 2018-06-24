@@ -1,0 +1,45 @@
+<h1>Bienvenido/a a nuestra aplicación!!</h1>
+
+
+<section>
+  <h1>¿Eres usuario?</h1>
+  <h2>Sub titulo</h2>
+  <article> Articulo uno</article>
+  <article>Articulo dos</article>
+  <article>Articulo tres</article>
+</section>
+
+<section>
+  <main role="main">
+    <p>Sino tiene una cuenta, deberá crear una primero para poder utilizar la aplicación</p>
+    <%= link_to "Crear cuenta", new_user_registration_path %><br />
+    <br>
+    <p>Si tiene cuenta, haga click en el siguiente enlace para identificarse</p>
+    <%= link_to "Iniciar sesion", new_user_session_path %>
+</main>
+
+</section>
+
+<% if user_signed_in? %>
+  <h2>Usted ya esta indentificado</h2>
+  <article>
+    <p><%= current_user.name %></p>
+    <p><%= current_user.user_type %></p>
+  </article>
+  <%= link_to "Mi Perfil", edit_user_registration_path(current_user) if current_user.id   %>
+  | <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete  %>
+<% else %>
+  <h2>Usted NO esta indentificado</h2>
+  <%= link_to "Iniciar sesion", new_user_session_path %>
+<% end %>
+
+<br>
+<br>
+<br>
+
+<%= link_to "Provincias", provinces_path %> |
+<%= link_to "Ciudades", cities_path %>
+
+|
+
+<%= link_to "San Google", 'http://google.com.ar' %>

@@ -1,3 +1,6 @@
+# cursorepaso
+Codigos de ejemplo de la clase de repaso del curso-taller sobre Rails 5
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +25,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+

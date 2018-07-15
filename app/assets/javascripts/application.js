@@ -9,8 +9,15 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+// Estas 3 nos pide bootstrap 4
+//= require jquery3
+//= require popper
+//= require bootstrap
 //
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+$('.alert').alert()

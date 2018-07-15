@@ -1,20 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @city.name %>
-</p>
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @city.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Provincia de <%= @city.province.name %></h6>
+      <p class="card-text">Tiene una población de <%= @city.city_population %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>City population:</strong>
-  <%= @city.city_population %>
-</p>
-
-<p>
-  <strong>Provincia:</strong>
-  <%= @city.province.name %>
-</p>
-
-<%= link_to 'Edit', edit_city_path(@city.id) %> |
-<%= link_to 'Back', cities_path %>
-
+  <br>
+  <%= link_to 'Editar', edit_city_path(@city.id), class: "btn btn-light" %> |
+  <%= link_to 'Volver', cities_path, class: "btn btn-light" %>
+</div>
